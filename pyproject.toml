@@ -1,0 +1,29 @@
+[project]
+name = "eGov-parser"
+version = "0.1.0"
+description = "Parsing scripts for eGov Viewer"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "black",
+    "flake8",
+    "mypy",
+    "pylint",
+    "pytest"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.black]
+line-length = 120
+target-version = ["py312"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+
+[tool.pylint]
+max-line-length = 88
+disable = ["C0111", "C0103"]
